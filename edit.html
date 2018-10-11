@@ -1,0 +1,23 @@
+<div class="" style="margin-left:30px; margin-right:30px;">
+
+  <!-- <form action="http://localhost:7000/api/user/user_id" method="post" > -->
+    <form ng-controller="useredit" ng-submit="">
+
+      <div class="form-group">
+        <input placeholder="username" ng-model="registerData.username"value=storage.username  name="username"
+        type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <input placeholder="email" ng-model="registerData.email" value=storage.email name="email"
+        type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <input placeholder="Mote de passe" ng-model="registerData.password" value=storage.password name="password"
+        type="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <button type="submit" ng-click="registerSubmit()" class="btn btn-success">ADD</button>
+        <!-- <button type="submit"  class="btn btn-success">ADD</button> -->
+      </div>
+    </form>
+</div>

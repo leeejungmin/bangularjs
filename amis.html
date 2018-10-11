@@ -1,0 +1,48 @@
+
+<div class="container">
+  <h3 align="center">La liste d'amis</h3>
+  <div ng-controller="amiscontroller" ng-init="display_data()">
+    <table class="table table-bordered">
+      <tr>
+          Search : <input type="text" placeholder="Cherche amis" ng-model="searchText.username" />
+        <th>votre id: {{getuserid}}</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+
+      <tr ng-repeat="x in names  | filter:searchText">
+        <!-- <td><button type"submit" class="btn btn-danger" ng-click="supprimamis( x.username,  x.email )">Supprime</button></td> -->
+        <td>{{x.id}}</td>
+        <td>{{x.username}}</td>
+        <td>{{x.email}}</td>
+        <!-- <td>{{x.username}}</td>
+        <td>{{x.email}}</td> -->
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+<H></H>
+
+
+
+
+
+  <button type"submit" class="btn btn-success" ng-click="addamis()">ADD</button>
+</section>
+
+
+
+
+
+
+
+<!-- <td><button type"submit" class="btn btn-danger" ng-click="supprimamis( x.user_id,  x.friend_user_id )">Supprime</button></td> -->
+
+
+<!-- <tr ng-repeat="x in namess">
+  <td><button type"submit" class="btn btn-danger" ng-click="supprimamis( x.user_id,  x.friend_user_id )">Supprime</button></td>
+  <td>{{x.username}}</td>
+  <td>{{x.email}}</td>
+</tr> -->
